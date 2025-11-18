@@ -116,22 +116,6 @@ weather_app/
 
 ---
 
-Possible Improvements
-
-Add support for more cities
-
-Include additional weather details (humidity, wind speed, etc.)
-
-Add icons for sun, clouds, rain, etc.
-
-Add improved error handling for invalid inputs
-
-Enhance UI design and layout
-
-
-
----
-
 License
 
 This project is created for educational purposes and is free to use.
