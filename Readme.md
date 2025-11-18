@@ -102,7 +102,7 @@ To use this application, you need an API key from OpenWeatherMap:
 
 
 
-appid=YOUR_API_KEY
+appid=20a01944eda34a13f4a4dcecfff77197
 
 
 ---
