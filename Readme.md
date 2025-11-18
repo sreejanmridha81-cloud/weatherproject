@@ -107,18 +107,14 @@ appid=20a01944eda34a13f4a4dcecfff77197
 
 ---
 
-Project Structure
+**Project Structure**
 
 weather_app/
 │-- main.py
 │-- README.txt (or README.md)
 
 
----
-
-License
-
-This project is created for educational purposes and is free to use.
-
+**Screenshots**
+![Weather App UI](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/screenshots/weather_app_ui.png.jpg)
 
 ---
