@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import ttk
 import requests
+
 def data_get():
  city=city_name.get()
 
