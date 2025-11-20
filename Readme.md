@@ -116,7 +116,7 @@ weather_app/
 
 Screenshot
 
-![Weather App UI Screenshot](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/screenshots/weather_app_ui.png)
+![Weather App UI Screenshot](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/assets/weather_app_ui.png)
 
 ---
 
