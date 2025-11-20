@@ -113,6 +113,7 @@ weather_app/
 │-- main.py
 │-- README.txt (or README.md)
 
+---
 
 Screenshot
 
