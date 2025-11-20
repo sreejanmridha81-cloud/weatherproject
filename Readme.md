@@ -119,6 +119,6 @@ Screenshots
 
 ![Weather App UI Screenshot](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/screenshots/weather_app_ui.png)
 
-![Weather App UI Video](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/assets/Video%20Project.mp4)
+![Weather App UI Video](https://github.com/sreejanmridha81-cloud/weatherproject/blob/main/assets/Video%20Project.gif)
 
 ---
