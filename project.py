@@ -12,8 +12,10 @@ def data_get():
 
  w_label1.config(text=data["weather"][0]["main"])
  wb_label1.config(text=data["weather"][0]["description"])
- temp_label1.config(text=str(int(data["main"]["temp"]-273.15)))
- per_label1.config(text=data["main"]["pressure"])
+ temperature_c = int(data["main"]["temp"] - 273.15)
+ temp_label1.config(text=f"{temperature_c} °C")
+ pressure_hpa = data["main"]["pressure"]
+ per_label1.config(text=f"{pressure_hpa} hPa")
 
 
 win=Tk()
