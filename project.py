@@ -1,22 +1,48 @@
 from tkinter import*
 from tkinter import ttk
+from tkinter import messagebox
 import requests
 
 def data_get():
  city=city_name.get()
-
- data=requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=20a01944eda34a13f4a4dcecfff77197").json()
+ if not city.strip():
+  messagebox.showerror("Error", "Please enter a city name")
+  return
  
- 
+ try:
+  
+  response = requests.get(
+   "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=20a01944eda34a13f4a4dcecfff77197",
+   timeout=5
+  )
 
+  if response.status_code != 200:
+   messagebox.showerror("Error", f"City not found or API error. Status code: {response.status_code}")
+   return
+  
+  data = response.json()
 
-
- w_label1.config(text=data["weather"][0]["main"])
- wb_label1.config(text=data["weather"][0]["description"])
- temperature_c = int(data["main"]["temp"] - 273.15)
- temp_label1.config(text=f"{temperature_c} °C")
- pressure_hpa = data["main"]["pressure"]
- per_label1.config(text=f"{pressure_hpa} hPa")
+  if "weather" not in data or "main" not in data:
+   messagebox.showerror("Error", "Invalid response from API")
+   return
+  
+  w_label1.config(text=data["weather"][0]["main"])
+  wb_label1.config(text=data["weather"][0]["description"])
+  temperature_c = int(data["main"]["temp"] - 273.15)
+  temp_label1.config(text=f"{temperature_c} °C")
+  pressure_hpa = data["main"]["pressure"]
+  per_label1.config(text=f"{pressure_hpa} hPa")
+  
+ except requests.exceptions.Timeout:
+  messagebox.showerror("Error", "Request timed out. Please try again.")
+ except requests.exceptions.ConnectionError:
+  messagebox.showerror("Error", "No internet connection or API server is down.")
+ except requests.exceptions.RequestException as e:
+  messagebox.showerror("Error", f"Request failed: {str(e)}")
+ except (KeyError, IndexError, ValueError) as e:
+  messagebox.showerror("Error", f"Error parsing response data: {str(e)}")
+ except Exception as e:
+  messagebox.showerror("Error", f"An unexpected error occurred: {str(e)}")
 
 
 win=Tk()
